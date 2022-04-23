@@ -17,5 +17,5 @@ ___
 ___
 
 <div align="center">
-    <p>Projeto ainda em construção...</p>
+    <p>Build with care by Miqueias Belfort</p>
 </div>
