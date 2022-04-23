@@ -13,6 +13,12 @@
     border: 20px solid #ecfa00;
     display: flex;
 }
+.right{
+    border-color: #00ff62;
+}
+.wrong {
+    border-color: #ff0000;
+}
 .letter, .blankSquare {
     font-size: 70px;
     line-height: 1.5;
@@ -39,4 +45,13 @@
     font-size: 2em;
     text-align: center;
     margin-right: 1em;
+}
+
+.back{
+    color: #ecfa00;
+    cursor: pointer;
+    margin-top: -20px;
+}
+.back:hover{
+    text-decoration: underline;
 }

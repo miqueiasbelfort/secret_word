@@ -11,7 +11,9 @@ const Game = (
     guessedLetter,
     wrongLetters,
     guesses,
-    score
+    score,
+    retry,
+    color
   }
 ) => {
 
@@ -34,14 +36,15 @@ const Game = (
          <span>Pontuação: {score}</span>
        </p>
        <h1>Adivinhe a palavra</h1>
+       <p className="back" onClick={retry}>Sair</p>
        <h3 className='tip'>
           Dica sobre a palavra: <span>{pickedCategory}</span>
        </h3>
        <p>Você ainda tem {guesses} tentativas(s).</p>
-       <div className='wordContainer'>
+       <div className={`wordContainer ${color}`}>
          {letters.map((letter, i) => (
            guessedLetter.includes(letter) ? (
-            <span className='letter'>{letter}</span>
+            <span key={i} className='letter'>{letter}</span>
            ) : (
              <span key={i} className="blankSquare"></span>
            )
@@ -65,7 +68,7 @@ const Game = (
        <div className='wrongLettersContainer'>
           <p>Letras ultilizadas</p>
           {wrongLetters.map((letter, i) => (
-            <span key={i}>{letter}, </span>
+            <span className="wrongLetter" key={i}>{letter}, </span>
           ))}
        </div>
     </div>
